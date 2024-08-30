@@ -12,7 +12,7 @@ export default function App() {
     } else if (age < 0) {
       setResult("Age must be a non-negative number");
     } else if (age > 120) {
-      setResult("Heart rate limits are only defined for people under 120 years old");
+      setResult("Heart rate limits are only defined for people aged 120 years or under");
     } else {
       const maxHeartRate = 220 - age;
       const lowerLimit = Math.round(maxHeartRate * 0.65);
@@ -23,7 +23,7 @@ export default function App() {
   }
 
   return (
-    <View style={[styles.container, styles.textAndInput]}>
+    <View style={[styles.container]}>
       <Text style={styles.textAndInput}>Age</Text>
       <TextInput
         style={[styles.textAndInput, styles.input]}
